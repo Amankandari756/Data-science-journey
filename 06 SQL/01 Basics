@@ -1,0 +1,8 @@
+USE schoolDB;
+
+SELECT * FROM student;
+UPDATE student SET grade = "10" WHERE grade ="10th";
+
+SELECT * FROM student;
+
+DELETE FROM student WHERE age<17;
