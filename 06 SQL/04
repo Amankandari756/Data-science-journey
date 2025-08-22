@@ -1,0 +1,6 @@
+CREATE TABLE accounts(
+id INT,
+balance DECIMAL(10,2) CHECK (balance >= 0)
+);
+
+INSERT INTO accounts VALUES(1, 100);
