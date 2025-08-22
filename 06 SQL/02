@@ -1,0 +1,19 @@
+USE aman;
+SELECT * FROM students;
+SELECT @@autocommit;
+SET autocommit = 0;
+
+INSERT INTO students(id, name ,age, Email, admission)
+VALUES( 3, "AMAN", 20, "amn@756", 2002-10-2);
+INSERT INTO students(id, name ,age, Email, admission) 
+VALUES( 4, "Ajay", 220, "aan@76", 2002-10-2);
+
+
+START transaction;
+UPDATE students SET age = age + 1 where id = 3;
+UPDATE students SET age = age - 1 where id = 4;
+ROLLBACK;
+ 
+SELECT * FROM students;
+
+SET AUTOCOMMIT = 1;
